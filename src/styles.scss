@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+/* src/styles.scss */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --bg-color: #0b0f19;       /* Deep dark blue/black */
+  --surface-color: rgba(255, 255, 255, 0.05); /* Glass effect base */
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --primary-glow: #6366f1;   /* Indigo accent */
+  --secondary-glow: #a855f7; /* Purple accent */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  overflow-x: hidden;
+  
+  /* Subtle background glow effect */
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(168, 85, 247, 0.15), transparent 25%);
+}
+
+/* Reusable Glassmorphism Class */
+.glass-panel {
+  background: var(--surface-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
